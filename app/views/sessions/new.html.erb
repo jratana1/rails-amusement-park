@@ -1,0 +1,6 @@
+<%= form_tag ({controller: 'sessions', action: 'create', method: 'post'}) do %>
+    <%=select_tag 'user_name', options_for_select(@users.collect{ |u| [u.name, u.id] }) %>
+    <label for="password">Password</label>
+    <input name=user_password>
+    <input type=submit value='Sign In'>
+  <% end %>
